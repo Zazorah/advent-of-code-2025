@@ -59,9 +59,8 @@ function part1(lines: string[]): number {
   let result = 0;
   const dial = new Dial();
 
-  for (const line of lines) {
+  for (const instruction of lines) {
     // Extract information.
-    const instruction = line.trim();
     const direction = instruction[0] as "L" | "R";
     const distance = parseInt(instruction.slice(1));
 
@@ -81,9 +80,8 @@ function part2(lines: string[]): number {
   let result = 0;
   const dial = new Dial();
 
-  for (const line of lines) {
+  for (const instruction of lines) {
     // Extract information.
-    const instruction = line.trim();
     const direction = instruction[0] as "L" | "R";
     const distance = parseInt(instruction.slice(1));
 

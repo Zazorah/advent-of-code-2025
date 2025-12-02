@@ -6,7 +6,13 @@ export function readInput(day: number): string {
 }
 
 export function readLines(day: number): string[] {
-  return readInput(day).trim().split("\n");
+  let result = [];
+  const rawLines = readInput(day).trim().split("\n");
+  for (const line of rawLines) {
+    result.push(line.trim());
+  }
+
+  return result;
 }
 
 export function readNumbers(day: number): number[] {
